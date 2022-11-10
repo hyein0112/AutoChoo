@@ -1,7 +1,11 @@
-import { Title } from '../components';
+import { MainPage } from '../components';
 
 const Main = () => {
-  return <Title />;
+  return (
+    <>
+      <MainPage />
+    </>
+  );
 };
 
 export default Main;
