@@ -1,5 +1,6 @@
+import { MalatangPage } from '../components';
 const Malatang = () => {
-  return <>Malatang</>;
+  return <MalatangPage />;
 };
 
 export default Malatang;
