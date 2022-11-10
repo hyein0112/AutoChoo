@@ -9,9 +9,10 @@ export const BacgroundStyle = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0px 4px 10px 5px rgba(34, 0, 0, 0.21);
 
   @media screen and (max-width: 700px) {
-    width: 100%;
+    width: 100vw;
   }
 `;
 

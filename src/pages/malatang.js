@@ -1,6 +1,6 @@
-import { MalatangPage } from '../components';
+import { DrawPage } from '../components';
 const Malatang = () => {
-  return <MalatangPage />;
+  return <DrawPage menu={'마라탕'} />;
 };
 
 export default Malatang;

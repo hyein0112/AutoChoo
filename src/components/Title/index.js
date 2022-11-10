@@ -8,6 +8,10 @@ const Title = ({ description }) => {
     <div
       css={css`
         margin-top: 70px;
+
+        @media screen and (max-height: 900px) {
+          margin-top: 7.78vh;
+        }
       `}
     >
       <I.TitleLogo />
