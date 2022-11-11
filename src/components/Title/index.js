@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { Link } from 'react-router-dom';
 import * as S from './style';
 import * as I from '../../assets/svg';
 
@@ -14,7 +15,9 @@ const Title = ({ description }) => {
         }
       `}
     >
-      <I.TitleLogo />
+      <Link to="/">
+        <I.TitleLogo />
+      </Link>
       <S.Description>{description}</S.Description>
     </div>
   );

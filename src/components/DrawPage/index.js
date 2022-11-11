@@ -116,6 +116,8 @@ const DrawPage = ({ menuKo, menuEn }) => {
   const [mushroom, setMushroom] = useState('');
   const [tofu, setTofu] = useState('');
 
+  const [tteokbokki, setTteokbokki] = useState('');
+
   const sortObj = type => {
     let sort = malaMenu
       .filter(x => x.type === type)
@@ -138,7 +140,7 @@ const DrawPage = ({ menuKo, menuEn }) => {
       setMushroom(sortObj('mushroom'));
       setTofu(sortObj('tofu'));
     } else if (menu === 'tteokbokki') {
-      alert('다음 업데이트를 기대해주세요!');
+      setTteokbokki('떡볶이!!!!!!');
     }
     setClickButton(true);
   };
@@ -151,14 +153,20 @@ const DrawPage = ({ menuKo, menuEn }) => {
       <S.DivStyle>
         <S.TopingBox>
           <S.MenuBox>
-            {clickButton === false ? null : (
+            {clickButton === false ? null : menuEn === 'malatang' ? (
               <div>
-                {vegetable} <br />
-                {nudleAndTteok} <br />
-                {seafoodAndMeat} <br />
-                {mushroom} <br />
+                {vegetable}
+                <br />
+                {nudleAndTteok}
+                <br />
+                {seafoodAndMeat}
+                <br />
+                {mushroom}
+                <br />
                 {tofu}
               </div>
+            ) : (
+              <div>{tteokbokki}</div>
             )}
           </S.MenuBox>
         </S.TopingBox>
