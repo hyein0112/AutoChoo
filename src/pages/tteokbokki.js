@@ -1,7 +1,7 @@
 import { DrawPage } from '../components';
 
 const Tteokbokki = () => {
-  return <DrawPage menu="떡볶이" />;
+  return <DrawPage menuKo="떡볶이" menuEn="tteokbokki" />;
 };
 
 export default Tteokbokki;
