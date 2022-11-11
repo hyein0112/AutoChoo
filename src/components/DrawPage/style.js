@@ -48,3 +48,15 @@ export const TopingBox = styled.div`
     height: 62.35vh;
   }
 `;
+
+export const MenuBox = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, sans-serif;
+  font-size: 1.5rem;
+  line-height: 3rem;
+`;

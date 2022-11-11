@@ -150,19 +150,7 @@ const DrawPage = ({ menuKo, menuEn }) => {
       <C.Title description={`${menuKo}에 넣을 토핑을 추천해드려요!`} />
       <S.DivStyle>
         <S.TopingBox>
-          <div
-            css={css`
-              width: 100%;
-              height: 100%;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              font-family: 'Apple SD Gothic Neo', -apple-system,
-                BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-              font-size: 1.5rem;
-              line-height: 3rem;
-            `}
-          >
+          <S.MenuBox>
             {clickButton === false ? null : (
               <div>
                 {vegetable} <br />
@@ -172,7 +160,7 @@ const DrawPage = ({ menuKo, menuEn }) => {
                 {tofu}
               </div>
             )}
-          </div>
+          </S.MenuBox>
         </S.TopingBox>
         <C.Button
           onClick={() => {
