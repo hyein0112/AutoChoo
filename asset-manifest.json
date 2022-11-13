@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/autochoo/static/js/main.acc91b22.js",
+    "main.js": "/autochoo/static/js/main.2ab65b30.js",
     "index.html": "/autochoo/index.html",
-    "main.acc91b22.js.map": "/autochoo/static/js/main.acc91b22.js.map"
+    "main.2ab65b30.js.map": "/autochoo/static/js/main.2ab65b30.js.map"
   },
   "entrypoints": [
-    "static/js/main.acc91b22.js"
+    "static/js/main.2ab65b30.js"
   ]
 }
