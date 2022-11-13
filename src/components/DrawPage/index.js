@@ -140,7 +140,7 @@ const DrawPage = ({ menuKo, menuEn }) => {
       setMushroom(sortObj('mushroom'));
       setTofu(sortObj('tofu'));
     } else if (menu === 'tteokbokki') {
-      setTteokbokki('떡볶이!!!!!!');
+      setTteokbokki('아직 준비 중이에요!');
     }
     setClickButton(true);
   };
