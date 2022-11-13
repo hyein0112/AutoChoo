@@ -17,11 +17,11 @@ const MainPage = () => {
         `}
       >
         <S.ButtonBox>
-          <Link to={`${process.env.PUBLIC_URL}/malatang`}>
+          <Link to={`/malatang`}>
             <C.Button menu="마라탕 " />
           </Link>
 
-          <Link to={`${process.env.PUBLIC_URL}/tteokbokki`}>
+          <Link to={`/tteokbokki`}>
             <C.Button menu="떡볶이 " />
           </Link>
         </S.ButtonBox>
