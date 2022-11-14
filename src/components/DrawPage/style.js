@@ -47,6 +47,9 @@ export const TopingBox = styled.div`
   @media screen and (max-height: 850px) {
     height: 62.35vh;
   }
+  @media screen and (max-height: 540px) {
+    height: 350px;
+  }
 `;
 
 export const MenuBox = styled.div`
