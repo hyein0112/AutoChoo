@@ -11,6 +11,10 @@ const DrawPage = ({ menuKo, menuEn }) => {
     },
     {
       type: 'vegetable',
+      name: '청경채',
+    },
+    {
+      type: 'vegetable',
       name: '콩나물',
     },
     {
