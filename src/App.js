@@ -4,7 +4,7 @@ import { ClickContext } from './Context';
 import * as P from './pages';
 
 function App() {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(true);
   return (
     <ClickContext.Provider value={{ isClicked, setIsClicked }}>
       <Routes>

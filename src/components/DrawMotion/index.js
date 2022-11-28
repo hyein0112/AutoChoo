@@ -13,7 +13,7 @@ const DrawMotion = ({
   tteokbokki,
 }) => {
   const { isClicked } = useContext(ClickContext);
-  const [timer, setTimer] = useState(false);
+  const [timer, setTimer] = useState(true);
 
   useEffect(() => {
     setTimer(true);
