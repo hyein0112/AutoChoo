@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import * as S from './style';
 import * as C from '..';
+import TteokbokkiImg from '../../assets/svg/tteokbokki.svg';
+import MalaImg from '../../assets/svg/mala.svg';
+import { ClickContext } from '../../Context';
 
 const DrawPage = ({ menuKo, menuEn }) => {
+  const { setIsClicked } = useContext(ClickContext);
   /* Menu List */
   const malaMenu = [
     {
@@ -120,6 +124,7 @@ const DrawPage = ({ menuKo, menuEn }) => {
 
   const [tteokbokki, setTteokbokki] = useState('');
 
+  const [clickButton, setClickButton] = useState(false);
   const sortObj = type => {
     let sort = malaMenu
       .filter(x => x.type === type)
@@ -145,9 +150,8 @@ const DrawPage = ({ menuKo, menuEn }) => {
       setTteokbokki('아직 준비 중이에요!');
     }
     setClickButton(true);
+    setIsClicked(prev => !prev);
   };
-
-  const [clickButton, setClickButton] = useState(false);
 
   return (
     <S.BacgroundStyle>
@@ -156,19 +160,21 @@ const DrawPage = ({ menuKo, menuEn }) => {
         <S.TopingBox>
           <S.MenuBox>
             {clickButton === false ? null : menuEn === 'malatang' ? (
-              <div>
-                {vegetable}
-                <br />
-                {nudleAndTteok}
-                <br />
-                {seafoodAndMeat}
-                <br />
-                {mushroom}
-                <br />
-                {tofu}
-              </div>
+              <C.DrawMotion
+                img={MalaImg}
+                menu={menuKo}
+                vegetable={vegetable}
+                nudleAndTteok={nudleAndTteok}
+                seafoodAndMeat={seafoodAndMeat}
+                mushroom={mushroom}
+                tofu={tofu}
+              />
             ) : (
-              <div>{tteokbokki}</div>
+              <C.DrawMotion
+                img={TteokbokkiImg}
+                menu={menuKo}
+                tteokbokki={tteokbokki}
+              />
             )}
           </S.MenuBox>
         </S.TopingBox>
