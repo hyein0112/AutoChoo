@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/autochoo/static/js/main.3a6cdd19.js",
+    "main.js": "/autochoo/static/js/main.b43d0657.js",
     "static/media/tteokbokki.svg": "/autochoo/static/media/tteokbokki.61bc7e08f416fb12b448cbff7f9e6afa.svg",
     "static/media/mala.svg": "/autochoo/static/media/mala.92a5aab3f4f281bf88b60722fbb343f9.svg",
     "index.html": "/autochoo/index.html",
-    "main.3a6cdd19.js.map": "/autochoo/static/js/main.3a6cdd19.js.map"
+    "main.b43d0657.js.map": "/autochoo/static/js/main.b43d0657.js.map"
   },
   "entrypoints": [
-    "static/js/main.3a6cdd19.js"
+    "static/js/main.b43d0657.js"
   ]
 }
