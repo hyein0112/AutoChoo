@@ -18,11 +18,14 @@ const MainPage = () => {
       >
         <S.ButtonBox>
           <Link to={`/malatang`}>
-            <C.Button menu="마라탕 " />
+            <C.Button menu="마라탕 토핑 뽑기" />
           </Link>
 
           <Link to={`/tteokbokki`}>
-            <C.Button menu="떡볶이 " />
+            <C.Button menu="떡볶이 토핑 뽑기" />
+          </Link>
+          <Link to={`/mymenu`}>
+            <C.Button menu="내 메뉴 보기" />
           </Link>
         </S.ButtonBox>
       </div>

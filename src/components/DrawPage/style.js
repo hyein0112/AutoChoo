@@ -63,3 +63,16 @@ export const MenuBox = styled.div`
   font-size: 1.5rem;
   line-height: 3rem;
 `;
+
+export const ButtonBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+`;
+
+export const Search = styled.a`
+  display: inline-block;
+  align-self: flex-end;
+  padding: 0 10px;
+  color: black;
+`;

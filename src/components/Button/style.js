@@ -10,6 +10,7 @@ export const ButtonStyle = styled.button`
   border-radius: 10px;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   transition: all 0.1s;
+  margin: 0 5px;
 
   @media screen and (max-width: 358px) {
     width: 98vw;

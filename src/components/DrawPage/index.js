@@ -1,11 +1,16 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import * as S from './style';
 import * as C from '..';
 import TteokbokkiImg from '../../assets/svg/tteokbokki.svg';
 import MalaImg from '../../assets/svg/mala.svg';
 import { ClickContext } from '../../Context';
 
-const DrawPage = ({ menuKo, menuEn }) => {
+const DrawPage = ({ message, menuKo, menuEn }) => {
+  const [myMenuArr, setMyMenuArr] = useState([]);
+  useEffect(() => {
+    setMyMenuArr(JSON.parse(localStorage.getItem('1')));
+  }, []);
+  let storageArr = [];
   const { setIsClicked } = useContext(ClickContext);
   /* Menu List */
   const malaMenu = [
@@ -139,7 +144,7 @@ const DrawPage = ({ menuKo, menuEn }) => {
     return sort;
   };
 
-  const handleClickButton = menu => {
+  const handleClickDrawButton = menu => {
     if (menu === 'malatang') {
       setVegetable(sortObj('vegetable'));
       setNudleAndTteok(sortObj('nudleAndTteok'));
@@ -152,13 +157,47 @@ const DrawPage = ({ menuKo, menuEn }) => {
     setClickButton(true);
     setIsClicked(prev => !prev);
   };
+  const handleClickSaveButton = () => {
+    storageArr = [vegetable, nudleAndTteok, seafoodAndMeat, mushroom, tofu];
+    localStorage.setItem('1', JSON.stringify(storageArr));
+    alert('메뉴를 저장했어요');
+  };
 
   return (
     <S.BacgroundStyle>
-      <C.Title description={`${menuKo}에 넣을 토핑을 추천해드려요!`} />
+      <C.Title description={message} />
       <S.DivStyle>
+        {menuEn === 'malatang' ? (
+          <S.Search
+            href="https://www.google.com/search?q=%EB%A7%88%EB%9D%BC%ED%83%95&rlz=1C5CHFA_enKR982KR985&oq=%EB%A7%88%EB%9D%BC%ED%83%95&aqs=chrome..69i57j69i59l3j69i60j69i61l2.3859j0j9&sourceid=chrome&ie=UTF-8"
+            target="brank"
+          >
+            마라탕이 무엇인지 모르시나요?
+          </S.Search>
+        ) : menuEn === 'tteokbokki' ? (
+          <S.Search
+            href="https://www.google.com/search?q=%EB%96%A1%EB%B3%B6%EC%9D%B4&rlz=1C5CHFA_enKR982KR985&oq=%EB%96%A1%EB%B3%B6%EC%9D%B4&aqs=chrome..69i57j69i59l2j69i60j69i61l2.1263j0j15&sourceid=chrome&ie=UTF-8"
+            target="brank"
+          >
+            떡볶이가 무엇인지 모르시나요?
+          </S.Search>
+        ) : null}
+
         <S.TopingBox>
           <S.MenuBox>
+            {menuKo === '메뉴' ? (
+              <div>
+                {myMenuArr[0]}
+                <br />
+                {myMenuArr[1]}
+                <br />
+                {myMenuArr[2]}
+                <br />
+                {myMenuArr[3]}
+                <br />
+                {myMenuArr[4]}
+              </div>
+            ) : null}
             {clickButton === false ? null : menuEn === 'malatang' ? (
               <C.DrawMotion
                 img={MalaImg}
@@ -178,11 +217,24 @@ const DrawPage = ({ menuKo, menuEn }) => {
             )}
           </S.MenuBox>
         </S.TopingBox>
-        <C.Button
-          onClick={() => {
-            handleClickButton(menuEn);
-          }}
-        />
+        <S.ButtonBox>
+          {menuKo === '메뉴' ? null : (
+            <>
+              <C.Button
+                menu="토핑 뽑기"
+                onClick={() => {
+                  handleClickDrawButton(menuEn);
+                }}
+              />
+              <C.Button
+                menu="메뉴 저장"
+                onClick={() => {
+                  handleClickSaveButton();
+                }}
+              />
+            </>
+          )}
+        </S.ButtonBox>
       </S.DivStyle>
     </S.BacgroundStyle>
   );

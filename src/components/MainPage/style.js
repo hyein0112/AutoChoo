@@ -18,7 +18,7 @@ export const BacgroundStyle = styled.div`
 
 export const ButtonBox = styled.div`
   width: 358px;
-  height: 221px;
+  height: 301px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

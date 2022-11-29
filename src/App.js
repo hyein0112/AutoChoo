@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<P.Main />} />
         <Route path={`/malatang`} element={<P.Malatang />} />
         <Route path={`/tteokbokki`} element={<P.Tteokbokki />} />
+        <Route path={`/mymenu`} element={<P.Mymenu />} />
       </Routes>
     </ClickContext.Provider>
   );
